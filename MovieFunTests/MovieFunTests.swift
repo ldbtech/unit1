@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import MovieFun
+//@testable import MovieFun
 
 class MovieFunTests: XCTestCase {
 

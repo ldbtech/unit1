@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import AlamofireImage
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var movies = [[String:Any]]()
@@ -62,9 +62,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         let baseURL = "https://image.tmdb.org/t/p/w185"
         let posterPath = movie["poster_path"] as! String
-        let posterURL = URL(string : baseURL + posterPath )
+        let posterURL = URL(string : baseURL + posterPath  )
         
-        cell.posterView.af.setImage(withURL :  posterURL!)
+        cell.posterView.af.setImage(withURL: posterURL!)
+        
+        
         return cell
     }
 
